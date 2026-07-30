@@ -15,6 +15,7 @@ class Persona{
         $this->documento = $documento;
         $this->telefono = $telefono;
     }
+    
  public function setNombre($nombre){
         $this->nombre = $nombre;
     }
@@ -35,8 +36,8 @@ class Persona{
         $this->telefono = $telefono;
     }
 
-    
-    
+
+
     public function getNombre(){
         return $this->nombre;
     }
@@ -56,5 +57,6 @@ class Persona{
     public function getTelefono(){
         return $this->telefono;
     }
+
 }
 

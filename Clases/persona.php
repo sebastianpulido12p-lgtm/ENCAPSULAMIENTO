@@ -6,23 +6,34 @@ class Persona{
     private $edad;
     private $sexo;
     private $documento;
-    private $telefono;
+    private $apellido;
 
-    public function __construct($nombre, $edad, $sexo, $documento, $telefono){
+    public function __construct($nombre, $edad, $sexo, $documento, $apellido){
         $this->nombre = $nombre;
         $this->edad = $edad;
         $this->sexo = $sexo;
         $this->documento = $documento;
-        $this->telefono = $telefono;
+        $this->apellido = $apellido;
+    }
+
+    public function setNombre($nombre){
+        if (is_string($nombre) && trim ($nombre) !== '') {
+            $this->nombre = $nombre;
+        }
     }
     
- public function setNombre($nombre){
-        $this->nombre = $nombre;
+    public function setApellido($apellido){
+        if (is_string($apellido) && trim ($apellido) !== '') {
+            $this->apellido = $apellido;
+        }
     }
 
     public function setEdad($edad){
-        $this->edad = $edad;
+        if (is_numeric($edad) && $edad >=0 && $edad <=120) {
+            $this->edad = $edad;
+        }
     }
+
 
     public function setSexo($sexo){
         $this->sexo = $sexo;
@@ -32,10 +43,7 @@ class Persona{
         $this->documento = $documento;
     }
 
-    public function setTelefono($telefono){
-        $this->telefono = $telefono;
-    }
-
+    
 
 
     public function getNombre(){
@@ -54,8 +62,8 @@ class Persona{
         return $this->documento;
     }
 
-    public function getTelefono(){
-        return $this->telefono;
+    public function getApellido(){
+        return $this->apellido;
     }
 
 }

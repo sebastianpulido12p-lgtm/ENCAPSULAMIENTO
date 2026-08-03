@@ -2,13 +2,13 @@
 
 require_once("../Clases/persona.php");
 
-$persona1 = new Persona("Juan", 20, "Masculino", "12345", "3001111111");
-$persona2 = new Persona("Ana", 18, "Femenino", "54321", "3002222222");
-$persona3 = new Persona("Carlos", 25, "Masculino", "67890", "3003333333");
+$persona1 = new Persona("Juan", 20, "Masculino", "12345", "Pérez");
+$persona2 = new Persona("Ana", 18, "Femenino", "54321", "López");
+$persona3 = new Persona("Carlos", 25, "Masculino", "67890", "García");
 
-$persona1->setEdad(30);
-$persona2->setNombre("Ana Maria");
-$persona3->setTelefono("3115555555");
+$persona1->setEdad(119);
+$persona2->setNombre("Ana maria");
+$persona3->setApellido("García");
 
 
 echo "<h2>Persona 1</h2>";
@@ -21,4 +21,4 @@ echo "Edad: " . $persona2->getEdad() . "<br><br>";
 
 echo "<h2>Persona 3</h2>";
 echo "Nombre: " . $persona3->getNombre() . "<br>";
-echo "Teléfono: " . $persona3->getTelefono() . "<br>";
+echo "Apellido: " . $persona3->getApellido() . "<br>";
